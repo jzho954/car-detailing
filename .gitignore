@@ -1,0 +1,26 @@
+# 3D Models (potentially large files)
+models/*.glb
+models/*.gltf
+models/*.bin
+models/*.jpg
+models/*.png
+
+# Node modules if you add any
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Vercel
+.vercel
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
