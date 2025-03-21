@@ -31,8 +31,8 @@ const initCarModel = () => {
     scene.background = null; // Transparent background
     
     // Camera setup
-    const camera = new THREE.PerspectiveCamera(35, container.clientWidth / container.clientHeight, 0.1, 1000);
-    camera.position.set(8, 3, 8);
+    const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+    camera.position.set(3, 1.5, 3);
     
     // Renderer setup
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -68,8 +68,8 @@ const initCarModel = () => {
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
     controls.screenSpacePanning = false;
-    controls.minDistance = 5;
-    controls.maxDistance = 15;
+    controls.minDistance = 2;
+    controls.maxDistance = 6;
     controls.maxPolarAngle = Math.PI / 2;
     controls.autoRotate = true;
     controls.autoRotateSpeed = 1;
