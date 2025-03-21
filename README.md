@@ -45,24 +45,23 @@ vercel
 
 ## 3D Car Model
 
-The landing page features a Ferrari 288 GTO 3D model from Sketchfab. To use the model:
+The landing page features a Ferrari 3D model from the Three.js examples. The model is loaded directly from a public URL to ensure it works properly when deployed to Vercel or other hosting platforms.
 
-1. **Download the model from Sketchfab**:
-   - Visit: https://sketchfab.com/3d-models/ferrari-288-gto-e83da098149746b5a3ba6f1661645b09
-   - Sign in to your Sketchfab account
-   - Click the "Download" button (ensure you have permission based on the model's license)
-   - Choose glTF format (.glb preferred)
+### Using a Custom 3D Model
 
-2. **Add the model to your project**:
-   - Place the downloaded file in the `models/` directory
-   - Rename the file to `ferrari_288_gto.glb` or update the path in `main.js`
+If you want to use a custom model (like the Ferrari 288 GTO from Sketchfab):
 
-3. **Model optimization (if needed)**:
-   - If the model is too large or complex, consider optimizing it using tools like:
-     - [gltf-pipeline](https://github.com/CesiumGS/gltf-pipeline)
-     - [Draco compression](https://github.com/google/draco)
+1. **Update the code**:
+   - Modify the `modelUrl` variable in `js/main.js` to point to your model
+   - You can use a CDN, public URL, or a relative path if you've added the model to your project
 
-The code is already set up to use the Draco loader for compressed models.
+2. **For local development with a downloaded model**:
+   - Download a model (e.g., from Sketchfab)
+   - Place it in the `models/` directory
+   - Update the path in `main.js` to `models/your-model-filename.glb`
+   - Make sure to update your deployment process to include the model file
+
+The code includes the Draco loader for compressed models and is configured to work with glTF/GLB format models.
 
 ## Browser Compatibility
 

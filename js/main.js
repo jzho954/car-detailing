@@ -94,9 +94,9 @@ const initCarModel = () => {
     loadingElement.textContent = 'Loading 3D Model...';
     container.appendChild(loadingElement);
     
-    // Load the Ferrari 288 GTO model from local file
-    // Path to your downloaded Sketchfab model
-    const modelUrl = 'models/ferrari_288_gto.glb'; // Update this path to where you store the downloaded model
+    // Use a publicly available model URL for deployment
+    // This ensures the model loads on Vercel without requiring local files
+    const modelUrl = 'https://threejs.org/examples/models/gltf/ferrari.glb';
     
     gltfLoader.load(
         modelUrl,
@@ -149,7 +149,7 @@ const initCarModel = () => {
             creditElement.style.backgroundColor = 'rgba(0,0,0,0.5)';
             creditElement.style.padding = '5px 10px';
             creditElement.style.borderRadius = '4px';
-            creditElement.textContent = 'Ferrari 288 GTO model from Sketchfab';
+            creditElement.textContent = 'Ferrari model from Three.js examples';
             container.appendChild(creditElement);
         },
         (xhr) => {
